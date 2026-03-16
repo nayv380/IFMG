@@ -86,3 +86,6 @@ Este currículo online apresenta minhas informações de forma interativa e visu
 ## Licença
 
 Este projeto é pessoal e não possui licença específica.
+
+## LINK
+- **Link do curriculo**: [Clique aqui](https://nayaraventura.vercel.app/)
