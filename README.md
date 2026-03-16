@@ -1,16 +1,64 @@
-# React + Vite
+# Currículo de Nayara Ventura Candido
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é o meu currículo online, desenvolvido como um projeto pessoal para apresentar minhas habilidades, experiências e formação acadêmica de forma interativa e moderna.
 
-Currently, two official plugins are available:
+## Sobre Mim
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Sou estudante de Engenharia de Software no 7º período na Anhanguera, cursando Front-end com React no IFMG. Tenho conhecimentos em Python, JavaScript, Java, HTML, CSS, React e SQL, além de experiência com bancos de dados relacionais e não relacionais. Participei de projetos acadêmicos e pessoais em desenvolvimento full stack e data science, atuei como monitora auxiliando colegas em programação e banco de dados, e participei de um Hackathon promovido pela Infinity School.
 
-## React Compiler
+## Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React, JavaScript, HTML, CSS, Tailwind CSS
+- **Backend**: Python, Java, SQL
+- **Ferramentas**: Git, GitHub, Vite, ESLint
+- **Outros**: Power BI, DBT, Pandas, Numpy, IoT
 
-## Expanding the ESLint configuration
+## Como Executar o Projeto
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/nayv380/IFMG.git
+   ```
+
+2. Entre na pasta do projeto:
+   ```bash
+   cd curriculum-vitae
+   ```
+
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+4. Execute o projeto em modo de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+5. Abra o navegador em `http://localhost:5173` para visualizar o currículo.
+
+## Estrutura do Projeto
+
+- **src/components/Curriculum.jsx**: Componente principal do currículo.
+- **src/assets/**: Imagens e recursos estáticos.
+- **public/**: Arquivos públicos.
+
+## Seções do Currículo
+
+- **Sobre Mim**: Resumo profissional.
+- **Experiência**: Histórico de trabalho.
+- **Projetos**: Projetos relevantes desenvolvidos.
+- **Formação Acadêmica**: Cursos e instituições.
+- **Cursos e Aprimoramentos**: Certificações e treinamentos.
+- **Habilidades Técnicas**: Competências em programação e ferramentas.
+- **Habilidades Interpessoais**: Soft skills.
+
+## Contato
+
+- **Email**: nay.380@icloud.com
+- **LinkedIn**: [Nayara Ventura](https://www.linkedin.com/in/nayara-ventura-01134936a/)
+- **GitHub**: [@nayv380](https://github.com/nayv380)
+
+## Licença
+
+Este projeto é pessoal e não possui licença específica.
