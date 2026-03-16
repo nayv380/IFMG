@@ -12,6 +12,7 @@ const DADOS = {
         local: "Contagem - MG",
         linkedin: "https://www.linkedin.com/in/nayara-ventura-01134936a/",
         github: "@nayv380",
+        github_url: "https://github.com/nayv380",
         habilitacao: "B",
         idade: "28 anos",
         estado_civil: "solteira",
@@ -79,12 +80,10 @@ const DADOS = {
     ]
 };
 
-// Componente principal do currículo
 export const Curriculum = () => {
     return (
         <div className="min-h-screen bg-[#FDFCFB] font-sans">
             <div className="flex flex-col md:flex-row min-h-screen">
-                {/* Barra lateral com foto, nome, cargo e informações de contato */}
                 <aside className="md:w-[35%] lg:w-[30%] bg-[#F7F3F0] p-10 border-r border-rose-100">
                     <div className="mb-8">
                         <img src={avatarphoto} alt="Foto de Nayara Ventura" className="size-32 lg:size-40 rounded-3xl rotate-3 shadow-xl border-4 border-white" />
@@ -97,12 +96,37 @@ export const Curriculum = () => {
                     <div className="mt-16 space-y-8">
                         <div>
                             <h3 className="text-rose-400 text-[11px] font-black uppercase border-b border-rose-100 pb-2 mb-4">Contato</h3>
-                            <p className="text-sm text-slate-600 mb-2">📞 {DADOS.contato.tel}</p>
-                            <p className="text-sm text-slate-600 mb-2">✉️ {DADOS.contato.email}</p>
-                            <p className="text-sm text-slate-600 mb-2">📍 {DADOS.contato.local}</p>
-                            <p className="text-sm text-slate-600 mb-2">🔗 {DADOS.contato.linkedin}</p>
-                            <p className="text-sm text-slate-600 mb-2">🐙 {DADOS.contato.github}</p>
+                            <p className="text-sm text-slate-600 mb-2 flex items-center gap-2">📞 {DADOS.contato.tel}</p>
+                            <p className="text-sm text-slate-600 mb-2 flex items-center gap-2">✉️ {DADOS.contato.email}</p>
+                            <p className="text-sm text-slate-600 mb-2 flex items-center gap-2">📍 {DADOS.contato.local}</p>
+                            
+                            {/* Link do LinkedIn Alterado */}
+                            <p className="text-sm text-slate-600 mb-2 flex items-center gap-2">
+                                <span>🔗</span>
+                                <a 
+                                    href={DADOS.contato.linkedin} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:text-rose-500 underline decoration-rose-200 transition-colors"
+                                >
+                                    LinkedIn Profissional
+                                </a>
+                            </p>
+
+                            {/* Link do GitHub Alterado */}
+                            <p className="text-sm text-slate-600 mb-2 flex items-center gap-2">
+                                <span>🐙</span>
+                                <a 
+                                    href={DADOS.contato.github_url} 
+                                    target="_blank" 
+                                    rel="noopener noreferrer"
+                                    className="hover:text-rose-500 underline decoration-rose-200 transition-colors"
+                                >
+                                    {DADOS.contato.github}
+                                </a>
+                            </p>
                         </div>
+
                         <div>
                             <h3 className="text-rose-400 text-[11px] font-black uppercase border-b border-rose-100 pb-2 mb-4">Habilidades Técnicas</h3>
                             {DADOS.habilidades.map(g => (
@@ -116,6 +140,7 @@ export const Curriculum = () => {
                                 </div>
                             ))}
                         </div>
+
                         <div>
                             <h3 className="text-rose-400 text-[11px] font-black uppercase border-b border-rose-100 pb-2 mb-4">Habilidades Interpessoais</h3>
                             <div className="flex flex-wrap gap-2">
@@ -127,22 +152,22 @@ export const Curriculum = () => {
                     </div>
                 </aside>
 
-                {/* Seção principal com resumo, experiência, projetos, formação e cursos */}
                 <main className="flex-1 p-10 md:p-16 lg:p-24 space-y-16 bg-white">
                     <section>
                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-rose-300 mb-6 flex items-center gap-4">
-                            <span className="w-12 h-[px] bg-rose-200"></span> Sobre Mim
+                            <span className="w-12 h-0.5 bg-rose-200"></span> Sobre Mim
                         </h2>
                         <p className="text-2xl text-slate-700 font-extralight leading-relaxed">{DADOS.resumo}</p>
                     </section>
+
                     <section>
                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-rose-300 mb-10 flex items-center gap-4">
-                            <span className="w-12 h-[px] bg-rose-200"></span> Experiência
+                            <span className="w-12 h-0.5 bg-rose-200"></span> Experiência
                         </h2>
                         <div className="space-y-12 border-l border-rose-50 ml-2 pl-8">
                             {DADOS.experiencia.map((e, i) => (
                                 <div key={i} className="relative">
-                                    <div className="absolute -left-10.25 top-2 w-4 h-4 bg-rose-200 border-2 border-white rounded-full"></div>
+                                    <div className="absolute -left-[36.5px] top-2 w-4 h-4 bg-rose-200 border-2 border-white rounded-full"></div>
                                     <h4 className="text-xl font-bold text-slate-800">{e.cargo}</h4>
                                     <p className="text-rose-400 font-medium text-sm uppercase">{e.empresa} • {e.periodo}</p>
                                     <p className="text-slate-500 text-sm mt-2">{e.descricao}</p>
@@ -150,9 +175,10 @@ export const Curriculum = () => {
                             ))}
                         </div>
                     </section>
+
                     <section>
                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-rose-300 mb-10 flex items-center gap-4">
-                            <span className="w-12 h-[px] bg-rose-200"></span> Projetos
+                            <span className="w-12 h-0.5 bg-rose-200"></span> Projetos
                         </h2>
                         <div className="space-y-8">
                             {DADOS.Projetos.map((p, i) => (
@@ -163,9 +189,10 @@ export const Curriculum = () => {
                             ))}
                         </div>
                     </section>
+
                     <section>
                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-rose-300 mb-10 flex items-center gap-4">
-                            <span className="w-12 h-[px] bg-rose-200"></span> Formação Acadêmica
+                            <span className="w-12 h-0.5 bg-rose-200"></span> Formação Acadêmica
                         </h2>
                         <div className="space-y-8">
                             {DADOS.formacao.map((f, i) => (
@@ -177,9 +204,10 @@ export const Curriculum = () => {
                             ))}
                         </div>
                     </section>
+
                     <section>
                         <h2 className="text-[10px] font-black uppercase tracking-[0.3em] text-rose-300 mb-10 flex items-center gap-4">
-                            <span className="w-12 h-[px] bg-rose-200"></span> Cursos e Aprimoramentos
+                            <span className="w-12 h-0.5 bg-rose-200"></span> Cursos e Aprimoramentos
                         </h2>
                         <ul className="list-disc list-inside text-slate-700 space-y-2">
                             {DADOS.cursos.map((c, i) => (
